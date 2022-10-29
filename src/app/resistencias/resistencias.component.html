@@ -1,0 +1,142 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="#">Action 1</a>
+                        <a class="dropdown-item" href="#">Action 2</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="d-flex my-2 my-lg-0">
+                <input class="form-control me-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+  </div>
+</nav>
+
+
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 text-center">
+            <label class="card" for="">1ra Banda</label>
+            <select class="form-select" [(ngModel)]="color1">
+                <option class="text-center" >Negro</option>
+                <option class="text-center" >Cafe</option>
+                <option class="text-center" >Rojo</option>
+                <option class="text-center" >Naranja</option>
+                <option class="text-center" >Amarillo</option>
+                <option class="text-center" >Verde</option>
+                <option class="text-center" >Azul</option>
+                <option class="text-center" >Violeta</option>
+                <option class="text-center" >Gris</option>
+                <option class="text-center" >Blanco</option>
+            </select>
+        </div>
+
+        <div class="col-lg-3 text-center">
+            <label class="card" for="">2da Banda</label>
+            <select class="form-select" [(ngModel)]="color2">
+                <option class="text-center" >Negro</option>
+                <option class="text-center" >Cafe</option>
+                <option class="text-center" >Rojo</option>
+                <option class="text-center" >Naranja</option>
+                <option class="text-center" >Amarillo</option>
+                <option class="text-center" >Verde</option>
+                <option class="text-center" >Azul</option>
+                <option class="text-center" >Violeta</option>
+                <option class="text-center" >Gris</option>
+                <option class="text-center" >Blanco</option>
+            </select>
+        </div>
+
+        <div class="col-lg-3 text-center">
+            <label class="card" for="">3er Banda</label>
+            <select class="form-select" [(ngModel)]="color3">
+                <option class="text-center" >Negro</option>
+                <option class="text-center" >Cafe</option>
+                <option class="text-center" >Rojo</option>
+                <option class="text-center" >Naranja</option>
+                <option class="text-center" >Amarillo</option>
+                <option class="text-center" >Verde</option>
+                <option class="text-center" >Azul</option>
+                <option class="text-center" >Violeta</option>
+                <option class="text-center" >Gris</option>
+                <option class="text-center" >Blanco</option>
+            </select>
+        </div>
+
+        <div class="col-lg-3 text-center" id="Tolerancia" >
+            <label class="form-control" for="">Tolerancia</label>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                            <input type="radio" id=""  value="1" [(ngModel)]="tolerancia" >
+                            <label class="card">Oro</label>
+                    </div>
+                    <div class="col-lg-6">
+                            <input type="radio" id=""  value="0" [(ngModel)]="tolerancia">
+                            <label class="card">Plata</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+
+<div class="container">
+    <div class="d-grid">
+        <button type="button" class="btn btn-primary btn-block" (click)="porcesar()" >Registrar</button>
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <thead class="table-dark">
+              <tr>
+                <th>Color 1</th>
+                <th>Color 2</th>
+                <th>Color 3</th>
+                <th>Tolerancia</th>
+                <th>Valor</th>
+                <th>Valor Mínimo</th>
+                <th>Valor Máximo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td> {{color1}}</td>
+                <td> {{color2}} </td>
+                <td> {{color3}} </td>
+                <td> {{toleranciaV}} </td>
+                <td> {{resistencia}} </td>
+                <td> {{min}} </td>
+                <td> {{max}} </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
